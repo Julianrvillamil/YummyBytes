@@ -1,36 +1,37 @@
 ---
 export interface Props {
-  image: string;
-  title: string;
-  description: string;
-  link: string;
+	image: string;
+	title: string;
+	description: string;
+	link: string;
 }
 const { image, title, description, link } = Astro.props;
 ---
 
-<article class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm">
-  <img
-    alt={title}
-    src={image}
-    class="h-56 w-full object-cover"
-  />
+<article
+	class="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm"
+>
+	<img alt={title} src={image} class="h-56 w-full object-cover" />
 
-  <div class="p-4 sm:p-6">
-    <a href={link}>
-      <h3 class="text-lg font-medium text-gray-900">
-        {title}
-      </h3>
-    </a>
+	<div class="p-4 sm:p-6">
+		<a href={link}>
+			<h3 class="text-lg font-medium text-gray-900">
+				{title}
+			</h3>
+		</a>
 
-    <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-      {description}
-    </p>
+		<p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+			{description}
+		</p>
 
-    <a href={link} class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">
-      Find out more
-      <span aria-hidden="true" class="block transition-all group-hover:ms-0.5">
-        &rarr;
-      </span>
-    </a>
-  </div>
+		<a
+			href={link}
+			class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+		>
+			Find out more
+			<span aria-hidden="true" class="block transition-all group-hover:ms-0.5">
+				&rarr;
+			</span>
+		</a>
+	</div>
 </article>
